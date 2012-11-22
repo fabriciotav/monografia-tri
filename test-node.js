@@ -1,6 +1,12 @@
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Teste node\n');
-}).listen(80);
-console.log('Server running at port 80');
+var express = require('express');
+var app = express();
+
+app.get('/', function(req, res){
+  res.send('');
+});
+
+app.get('/tri', function(req, res){
+  res.send('Teste node.js');
+});
+
+app.listen(80);
